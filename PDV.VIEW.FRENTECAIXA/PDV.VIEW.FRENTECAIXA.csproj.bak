@@ -1,0 +1,1015 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{065DCA43-1BEA-40CB-8EC4-55F3426682DD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PDV.VIEW.FRENTECAIXA</RootNamespace>
+    <AssemblyName>PDV.VIEW.FRENTECAIXA</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>cart__3__spe_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cappta.Gp.Api.Com">
+      <HintPath>..\PDV.LIB\cappta\Cappta.Gp.Api.Com.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v19.1.UI, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v19.1.Drawing, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v19.1.Export, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v19.1.UI, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v19.1.Wizard, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPdfViewer.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v19.1.Extensions, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DFe.Classes">
+      <HintPath>..\PDV.LIB\zeus\AppNfe\DFe.Classes.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DFe.Utils">
+      <HintPath>..\PDV.LIB\zeus\AppNfe\DFe.Utils.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PDV.LIB\zeus\AppNfe\FastReport.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FastReport.Bars, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PDV.LIB\zeus\AppNfe\FastReport.Bars.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FastReport.Editor, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PDV.LIB\zeus\AppNfe\FastReport.Editor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework">
+      <HintPath>..\PDV.LIB\metro\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>..\PDV.LIB\metro\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>..\PDV.LIB\metro\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NFe.Classes">
+      <HintPath>..\PDV.LIB\zeus\AppNfe\NFe.Classes.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NFe.Danfe.Base">
+      <HintPath>..\PDV.LIB\zeus\AppNfe\NFe.Danfe.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NFe.Danfe.Fast">
+      <HintPath>..\PDV.LIB\zeus\AppNfe\NFe.Danfe.Fast.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NFe.Servicos">
+      <HintPath>..\PDV.LIB\zeus\AppNfe\NFe.Servicos.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NFe.Utils">
+      <HintPath>..\PDV.LIB\zeus\AppNfe\NFe.Utils.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NFe.Wsdl">
+      <HintPath>..\PDV.LIB\zeus\AppNfe\NFe.Wsdl.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SysAdm">
+      <HintPath>..\..\..\..\Licensas\SysAdm.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Context\Contexto.cs" />
+    <Compile Include="App_Context\PDVControlador.cs" />
+    <Compile Include="Forms\PDV\Comanda\GVEN_PedidoVendaComanda_IdentificarUsuarioSuperior.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\Comanda\GVEN_PedidoVendaComanda_IdentificarUsuarioSuperior.Designer.cs">
+      <DependentUpon>GVEN_PedidoVendaComanda_IdentificarUsuarioSuperior.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\DAV\DAVFormaPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\DAV\DAVFormaPagamento.Designer.cs">
+      <DependentUpon>DAVFormaPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\DAV\DAVPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\DAV\DAVPedido.Designer.cs">
+      <DependentUpon>DAVPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\DAV\DAVPesquisarProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\DAV\DAVPesquisarProduto.Designer.cs">
+      <DependentUpon>DAVPesquisarProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\DAV\MainDAV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\DAV\MainDAV.Designer.cs">
+      <DependentUpon>MainDAV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\FCA_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\FCA_Cliente.Designer.cs">
+      <DependentUpon>FCA_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\FCA_ContatoClienteFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\FCA_ContatoClienteFornecedor.Designer.cs">
+      <DependentUpon>FCA_ContatoClienteFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\FCA_HistoricoClienteFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\FCA_HistoricoClienteFornecedor.Designer.cs">
+      <DependentUpon>FCA_HistoricoClienteFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\FCO_ClienteDAV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\FCO_ClienteDAV.Designer.cs">
+      <DependentUpon>FCO_ClienteDAV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\FCO_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\FCO_Cliente.Designer.cs">
+      <DependentUpon>FCO_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\FREL_Preview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\FREL_Preview.Designer.cs">
+      <DependentUpon>FREL_Preview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_CarregarVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_CarregarVenda.Designer.cs">
+      <DependentUpon>GPDV_CarregarVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_AjusteEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_AjusteEstoque.Designer.cs">
+      <DependentUpon>GPDV_AjusteEstoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_ConsultarProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_ConsultarProduto.Designer.cs">
+      <DependentUpon>GPDV_ConsultarProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_Comandos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_Comandos.Designer.cs">
+      <DependentUpon>GPDV_Comandos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_IdentificarClienteDAV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_IdentificarClienteDAV.Designer.cs">
+      <DependentUpon>GPDV_IdentificarClienteDAV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_SuprimentoCaixa .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_SuprimentoCaixa .Designer.cs">
+      <DependentUpon>GPDV_SuprimentoCaixa .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_TipoVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_TipoVenda.Designer.cs">
+      <DependentUpon>GPDV_TipoVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_NFCeGeral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_NFCeGeral.Designer.cs">
+      <DependentUpon>GPDV_NFCeGeral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_CancelarItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_CancelarItem.Designer.cs">
+      <DependentUpon>GPDV_CancelarItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_ConsultarPreco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_ConsultarPreco.Designer.cs">
+      <DependentUpon>GPDV_ConsultarPreco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_DescontoItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_DescontoItem.Designer.cs">
+      <DependentUpon>GPDV_DescontoItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_FinalizarVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_FinalizarVenda.Designer.cs">
+      <DependentUpon>GPDV_FinalizarVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_IdentificarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_IdentificarCliente.Designer.cs">
+      <DependentUpon>GPDV_IdentificarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_InformarDescontoItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_InformarDescontoItem.Designer.cs">
+      <DependentUpon>GPDV_InformarDescontoItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_PainelInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_PainelInicial.Designer.cs">
+      <DependentUpon>GPDV_PainelInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_PesquisarItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_PesquisarItem.Designer.cs">
+      <DependentUpon>GPDV_PesquisarItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_SangriaCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\GPDV_SangriaCaixa.Designer.cs">
+      <DependentUpon>GPDV_SangriaCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PDV\Menu\GPDV_MenuConfiguracoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PDV\Menu\GPDV_MenuConfiguracoes.Designer.cs">
+      <DependentUpon>GPDV_MenuConfiguracoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Seletores\SEL_Comanda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Seletores\SEL_Comanda.Designer.cs">
+      <DependentUpon>SEL_Comanda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mensagens.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Mensagens.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TEF\CompranteTEF.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TEF\CompranteTEF.Designer.cs">
+      <DependentUpon>CompranteTEF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TEF\CreateClienteCappta.cs" />
+    <Compile Include="TEF\FormularioSample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TEF\FormularioSample.designer.cs">
+      <DependentUpon>FormularioSample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TEF\InputBoxRecarga .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TEF\InputBoxFormaPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TEF\InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TEF\Notificable.cs" />
+    <Compile Include="TEF\Poup\TEF_Poup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TEF\Poup\TEF_Poup.Designer.cs">
+      <DependentUpon>TEF_Poup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TEF\TEFPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TEF\TEFPagamento.designer.cs">
+      <DependentUpon>TEFPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TEF\Model\TipoInformacaoPinpad.cs" />
+    <Compile Include="TEF\Model\TipoParcelamento.cs" />
+    <Compile Include="TEF\TaskManagerForm.cs" />
+    <Compile Include="Upgrade.cs" />
+    <EmbeddedResource Include="Forms\PDV\Comanda\GVEN_PedidoVendaComanda_IdentificarUsuarioSuperior.resx">
+      <DependentUpon>GVEN_PedidoVendaComanda_IdentificarUsuarioSuperior.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\DAV\DAVFormaPagamento.resx">
+      <DependentUpon>DAVFormaPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\DAV\DAVPedido.resx">
+      <DependentUpon>DAVPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\DAV\DAVPesquisarProduto.resx">
+      <DependentUpon>DAVPesquisarProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\DAV\MainDAV.resx">
+      <DependentUpon>MainDAV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\FCA_Cliente.resx">
+      <DependentUpon>FCA_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\FCA_ContatoClienteFornecedor.resx">
+      <DependentUpon>FCA_ContatoClienteFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\FCA_HistoricoClienteFornecedor.resx">
+      <DependentUpon>FCA_HistoricoClienteFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\FCO_ClienteDAV.resx">
+      <DependentUpon>FCO_ClienteDAV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\FCO_Cliente.resx">
+      <DependentUpon>FCO_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\FREL_Preview.resx">
+      <DependentUpon>FREL_Preview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_CarregarVenda.resx">
+      <DependentUpon>GPDV_CarregarVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_AjusteEstoque.resx">
+      <DependentUpon>GPDV_AjusteEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_ConsultarProduto.resx">
+      <DependentUpon>GPDV_ConsultarProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_Comandos.resx">
+      <DependentUpon>GPDV_Comandos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_IdentificarClienteDAV.resx">
+      <DependentUpon>GPDV_IdentificarClienteDAV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_PainelInicial.resx">
+      <DependentUpon>GPDV_PainelInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_SuprimentoCaixa .resx">
+      <DependentUpon>GPDV_SuprimentoCaixa .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_TipoVenda.resx">
+      <DependentUpon>GPDV_TipoVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_NFCeGeral.resx">
+      <DependentUpon>GPDV_NFCeGeral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_CancelarItem.resx">
+      <DependentUpon>GPDV_CancelarItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_ConsultarPreco.resx">
+      <DependentUpon>GPDV_ConsultarPreco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_DescontoItem.resx">
+      <DependentUpon>GPDV_DescontoItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_FinalizarVenda.resx">
+      <DependentUpon>GPDV_FinalizarVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_IdentificarCliente.resx">
+      <DependentUpon>GPDV_IdentificarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_InformarDescontoItem.resx">
+      <DependentUpon>GPDV_InformarDescontoItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_PesquisarItem.resx">
+      <DependentUpon>GPDV_PesquisarItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\GPDV_SangriaCaixa.resx">
+      <DependentUpon>GPDV_SangriaCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PDV\Menu\GPDV_MenuConfiguracoes.resx">
+      <DependentUpon>GPDV_MenuConfiguracoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Seletores\SEL_Comanda.resx">
+      <DependentUpon>SEL_Comanda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mensagens.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Mensagens.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TEF\CompranteTEF.resx">
+      <DependentUpon>CompranteTEF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TEF\FormularioSample.resx">
+      <DependentUpon>FormularioSample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TEF\InputBoxRecarga .resx">
+      <DependentUpon>InputBoxRecarga .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TEF\InputBoxFormaPagamento.resx">
+      <DependentUpon>InputBoxFormaPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TEF\InputBox.resx">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TEF\Poup\TEF_Poup.resx">
+      <DependentUpon>TEF_Poup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TEF\TEFPagamento.resx">
+      <DependentUpon>TEFPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App_Data\Schemas\atuCadEmiDFe_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\cabecMsg_v1.02.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\cadEmiDFe_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\cancNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\CCe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\confRecebto_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\consCad_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\consDPEC_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\consNFeDest_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\consReciNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\consReciNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\consSitNFe_v2.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\consSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\consStatServ_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\consStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\distDFeInt_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\downloadNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\e110110_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\e110111_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\e110140_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\e210200_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\e210210_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\e210220_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\e210240_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\envCancelPProrrogNFe_v1.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\envCCe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\envConfRecebto_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\envDPEC_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\envEPEC_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\envEventoCancNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\envEvento_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\envFiscoNfe_v1.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\enviNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\enviNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\envPProrrogNFe_v1.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\EPEC_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\eventoCancNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\eventoEPEC_v0.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\inutNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\inutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\LeiauteCadastroEmissorDFe_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteCancNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteCCe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteConfRecebto_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteConsNFeDest_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteConsSitNFe_v2.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteConsSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteConsStatServ_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteConsStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteConsultaCadastro_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteConsultaCadastro_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteDownloadNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteDPEC_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteEPEC_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteEventoCancNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteEvento_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteInutNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteInutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\leiauteSRE_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\nfe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\nfe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\procCancNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\procCCeNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\procConfRecebtoNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\procEPEC_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\procEventoCancNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\procEventoNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\procEventoNFe_v99.99.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\procInutNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\procInutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\procNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\procNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\resEvento_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\resNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retAtuCadEmiDFe_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retCancNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retConsCad_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retConsDPEC_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retconsNFeDest_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retConsReciNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retConsReciNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retConsSitNFe_v2.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retConsSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retConsStatServ_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retConsStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retDistDFeInt_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retDownloadNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retDPEC_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retEnvCancelPProrrogNFe_v1.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retEnvCCe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retEnvConfRecebto_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retEnvEPEC_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retEnvEventoCancNFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retEnvEvento_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retEnvFiscoNFe_v1.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retEnviNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retEnviNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retEventoEPEC_v0.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retInutNFe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retInutNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\retPProrrogNFe_v1.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\tiposBasico_v1.03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\tiposBasico_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\tiposDistDFe_v1.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Schemas\xmldsig-core-schema_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Start.ini" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ModelAndroidApp\ModelAndroidApp.csproj">
+      <Project>{792FD9AC-9348-4E9B-9FC2-3F15E020E611}</Project>
+      <Name>ModelAndroidApp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.CONTROLER\PDV.CONTROLER.csproj">
+      <Project>{245d7222-45b5-4de2-bae5-17f4f031b2a2}</Project>
+      <Name>PDV.CONTROLER</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.CONTROLLER.EVENTONFE\PDV.CONTROLLER.EVENTONFE.csproj">
+      <Project>{b3aba9d9-0b7f-4650-a861-2d2007016932}</Project>
+      <Name>PDV.CONTROLLER.EVENTONFE</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.CONTROLLER.FISCAL\PDV.CONTROLLER.FISCAL.csproj">
+      <Project>{51415768-8f4c-4d90-9418-26b874fdc05b}</Project>
+      <Name>PDV.CONTROLLER.FISCAL</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.CONTROLLER.NFCE\PDV.CONTROLLER.NFCE.csproj">
+      <Project>{f8df9e98-7110-41b6-a72f-b5d84872fc1c}</Project>
+      <Name>PDV.CONTROLLER.NFCE</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.CONTROLLER.NFE\PDV.CONTROLLER.NFE.csproj">
+      <Project>{D4701AC6-4053-484F-911E-3B84EA13A02E}</Project>
+      <Name>PDV.CONTROLLER.NFE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.DAO\PDV.DAO.csproj">
+      <Project>{397d862c-3539-4d10-ab60-4376af4f010a}</Project>
+      <Name>PDV.DAO</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.REPORTS\PDV.REPORTS.csproj">
+      <Project>{53a7565d-3528-4b14-8b71-191774147faa}</Project>
+      <Name>PDV.REPORTS</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.UTIL.FORMS\PDV.UTIL.FORMS.csproj">
+      <Project>{8f63b583-b178-492b-a29d-cc395ee4537c}</Project>
+      <Name>PDV.UTIL.FORMS</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.UTIL\PDV.UTIL.csproj">
+      <Project>{d0aa02cb-a9d4-47b0-9e06-f96760d03d96}</Project>
+      <Name>PDV.UTIL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.VIEW\PDV.VIEW.csproj">
+      <Project>{5c9c61fb-e97d-4b25-a478-70dd088f1219}</Project>
+      <Name>PDV.VIEW</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 1%402x.png" />
+    <None Include="Resources\FORTEPLUS_2018.jpg" />
+    <Content Include="cart__3__spe_icon.ico" />
+    <Content Include="ico.ico" />
+    <Content Include="icone.ico" />
+    <Content Include="Resources\logo.png" />
+    <None Include="Resources\logoeb.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

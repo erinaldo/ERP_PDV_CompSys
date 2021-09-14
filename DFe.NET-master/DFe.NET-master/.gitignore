@@ -1,0 +1,181 @@
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# =========================
+# Operating System Files
+# =========================
+
+# OSX
+# =========================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+[Xx]64/
+[Xx]86/
+[Bb]uild/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# Build Results of an ATL Project
+[Dd]ebugPS/
+[Rr]eleasePS/
+dlldata.c
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.csproj.user
+*.vspscc
+
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/packages/*
+# except build/, which is used as an MSBuild target.
+!**/packages/build/
+# Uncomment if necessary however generally it will be regenerated when needed
+#!**/packages/repositories.config
+# NuGet v3's project.json files produces more ignoreable files
+*.nuget.props
+*.nuget.targets
+
+# User-specific files (MonoDevelop/Xamarin Studio)
+*.userprefs
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+/BuildProcessTemplates
+/.vs/Zeus NFe/v15/.suo
+/.vs/Zeus NFe/v14/.suo
+/NFe.AppTeste/obj/Debug
+/NFe.Classes/obj/Debug
+/Nfe.Impressao/obj/Debug
+/NFe.Servicos/obj/Debug
+/NFe.Utils/obj/Debug
+/NFe.Wsdl/obj/Debug
+/NFe.Wsdl/obj/Release
+/NFe.Wsdl/bin
+/NFe.Utils/obj/Release
+/NFe.Utils/bin
+/NFe.Servicos/obj/Release
+/NFe.Servicos/bin
+/Nfe.Impressao/obj/Release
+/Nfe.Impressao/bin
+/NFe.Classes/obj/Release
+/NFe.Classes/bin
+/NFe.AppTeste/obj/Release
+/NFe.AppTeste/bin
+/NFe.Integracao/bin/Debug
+/NFe.Integracao/obj/Debug
+/NFe.Danfe.AppTeste/obj
+/NFe.Danfe.AppTeste/bin
+/NFe.Danfe.Base/bin
+/NFe.Danfe.Base/obj
+/NFe.Danfe.Fast/bin
+/NFe.Danfe.Fast/obj
+/NFe.Integracao/obj/Release
+/MDFe.Classes/bin
+/MDFe.Classes/obj
+/MDFe.AppTeste/bin
+/MDFe.AppTeste/obj
+/MDFe.Utils/bin
+/MDFe.Utils/obj
+/DFe.Classes/bin
+/DFe.Classes/obj
+/DFe.Utils/bin
+/DFe.Utils/obj
+/MDFe.Servicos/bin
+/MDFe.Servicos/obj
+/MDFe.Wsdl/bin
+/MDFe.Wsdl/obj
+/DFe.Classes/obj
+/DFe.Utils/obj
+/MDFe.AppTeste/obj
+/MDFe.AppTeste/bin
+/MDFe.Classes/obj
+/MDFe.Utils/obj
+/MDFe.Damdfe.AppTeste/obj
+/MDFe.Damdfe.AppTeste/bin
+/MDFe.Damdfe.Base/obj
+/MDFe.Damdfe.Base/bin
+/MDFe.Damdfe.Fast/obj
+/MDFe.Damdfe.Fast/bin
+/NFe.Danfe.Nativo/bin
+/NFe.Danfe.Nativo/obj
+/GraphicsPrinter/bin
+/GraphicsPrinter/obj
+/GraphicsPrinter/bin
+/GraphicsPrinter/obj
+/NFe.Danfe.Nativo/obj
+/NFe.Danfe.Nativo/bin
+/NFe.Integracao/bin
+/CTe.AppTeste/bin
+/CTe.AppTeste/bin/Debug
+/CTe.AppTeste/bin/Release
+/CTe.AppTeste/obj
+/CTe.Classes/bin
+/CTe.Classes/obj
+/CTe.Servicos/bin
+/CTe.Servicos/obj
+/CTe.Utils/bin
+/CTe.Utils/obj
+/CTe.Wsdl/bin
+/CTe.Wsdl/obj
+/CTe.AppTeste/obj
+/CTe.AppTeste/bin
+/CTe.Classes/obj
+/CTe.Servicos/obj
+/CTe.Utils/obj
+/CTe.Wsdl/obj
+/CTe.Dacte.AppTeste/obj/Debug
+/CTe.Dacte.AppTeste/bin/Debug
+/CTe.Dacte.Base/obj/Debug
+/CTe.Dacte.Base/bin/Debug
+/CTe.Dacte.Fast/obj/Debug
+/CTe.Dacte.Fast/bin/Debug
+/.vs/*
+.vs/Zeus NFe/v15/.suo
+/src/.vs/ZeusDFe/v15/Server/sqlite3/db.lock
+/src/.vs/ZeusDFe/v15/Server/sqlite3/storage.ide
+/src/*

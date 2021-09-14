@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{53A7565D-3528-4B14-8B71-191774147FAA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PDV.REPORTS</RootNamespace>
+    <AssemblyName>PDV.REPORTS</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v18.1.Export, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v18.1.Wizard, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v18.1.UI, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v18.1.Extensions, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\Cabecalho.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Cabecalho.Designer.cs">
+      <DependentUpon>Cabecalho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CabecalhoTermica.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CabecalhoTermica.Designer.cs">
+      <DependentUpon>CabecalhoTermica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CarneVendaTermica\Crediario.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CarneVendaTermica\Crediario.Designer.cs">
+      <DependentUpon>Crediario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CarneVendaTermica\CarneVenda.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CarneVendaTermica\CarneVenda.Designer.cs">
+      <DependentUpon>CarneVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CarneVendaTermica\Crediario_Vencimentos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CarneVendaTermica\Crediario_Vencimentos.Designer.cs">
+      <DependentUpon>Crediario_Vencimentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CarneVendaTermica\CarneVenda_Vencimentos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CarneVendaTermica\CarneVenda_Vencimentos.Designer.cs">
+      <DependentUpon>CarneVenda_Vencimentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ComandasEmAberto\ComandasEmAbertoUsuario.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ComandasEmAberto\ComandasEmAbertoUsuario.Designer.cs">
+      <DependentUpon>ComandasEmAbertoUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FechamentoCaixa\FechamentoCaixaDiarioTermica.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FechamentoCaixa\FechamentoCaixaDiarioTermica.Designer.cs">
+      <DependentUpon>FechamentoCaixaDiarioTermica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FechamentoCaixa\FechamentoCaixaDiario_AberturaFechamentoTermica.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FechamentoCaixa\FechamentoCaixaDiario_AberturaFechamentoTermica.Designer.cs">
+      <DependentUpon>FechamentoCaixaDiario_AberturaFechamentoTermica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FechamentoCaixa\FechamentoCaixaDiario_RecebimentosTermica.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FechamentoCaixa\FechamentoCaixaDiario_RecebimentosTermica.Designer.cs">
+      <DependentUpon>FechamentoCaixaDiario_RecebimentosTermica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FechamentoCaixa\FechamentoCaixaDiario_SangriasTermica.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FechamentoCaixa\FechamentoCaixaDiario_SangriasTermica.Designer.cs">
+      <DependentUpon>FechamentoCaixaDiario_SangriasTermica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FechamentoCaixa\FechamentoCaixaDiario_TotalizadorPagamentosTermica.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FechamentoCaixa\FechamentoCaixaDiario_TotalizadorPagamentosTermica.Designer.cs">
+      <DependentUpon>FechamentoCaixaDiario_TotalizadorPagamentosTermica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FechamentoCaixa\FechamentoCaixaDiario_PagamentosTermica.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FechamentoCaixa\FechamentoCaixaDiario_PagamentosTermica.Designer.cs">
+      <DependentUpon>FechamentoCaixaDiario_PagamentosTermica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FluxoCaixaDiario\FluxoCaixaDiario.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FluxoCaixaDiario\FluxoCaixaDiario.Designer.cs">
+      <DependentUpon>FluxoCaixaDiario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FluxoCaixaDiario\FluxoCaixaDiario_Pagamentos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FluxoCaixaDiario\FluxoCaixaDiario_Pagamentos.Designer.cs">
+      <DependentUpon>FluxoCaixaDiario_Pagamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FluxoCaixaDiario\FluxoCaixaDiario_TotalizadorPagamentos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FluxoCaixaDiario\FluxoCaixaDiario_TotalizadorPagamentos.Designer.cs">
+      <DependentUpon>FluxoCaixaDiario_TotalizadorPagamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ImpressaoComandas\ImpressaoComanda.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ImpressaoComandas\ImpressaoComanda.Designer.cs">
+      <DependentUpon>ImpressaoComanda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PedidoDeCompra\ReportPedidoCompra.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PedidoDeCompra\ReportPedidoCompra.Designer.cs">
+      <DependentUpon>ReportPedidoCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PedidoVendaComandaTermica\ReciboPedidoVendaComanda.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PedidoVendaComandaTermica\ReciboPedidoVendaComanda.Designer.cs">
+      <DependentUpon>ReciboPedidoVendaComanda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PedidoVendaComandaTermica\ReciboPedidoVendaComanda_Itens.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PedidoVendaComandaTermica\ReciboPedidoVendaComanda_Itens.Designer.cs">
+      <DependentUpon>ReciboPedidoVendaComanda_Itens.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PedidoVendaTermica\ReciboPedidoVenda.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PedidoVendaTermica\ReciboPedidoVenda.Designer.cs">
+      <DependentUpon>ReciboPedidoVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PedidoVendaTermica\ReciboPedidoVenda_Itens.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PedidoVendaTermica\ReciboPedidoVenda_Itens.Designer.cs">
+      <DependentUpon>ReciboPedidoVenda_Itens.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ProdutosPorFornecedor\ProdutosPorFornecedor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ProdutosPorFornecedor\ProdutosPorFornecedor.Designer.cs">
+      <DependentUpon>ProdutosPorFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XtraReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReport1.Designer.cs">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PDV.CONTROLER\PDV.CONTROLER.csproj">
+      <Project>{245d7222-45b5-4de2-bae5-17f4f031b2a2}</Project>
+      <Name>PDV.CONTROLER</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PDV.DAO\PDV.DAO.csproj">
+      <Project>{397D862C-3539-4D10-AB60-4376AF4F010A}</Project>
+      <Name>PDV.DAO</Name>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Reports\Cabecalho.resx">
+      <DependentUpon>Cabecalho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CabecalhoTermica.resx">
+      <DependentUpon>CabecalhoTermica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CarneVendaTermica\Crediario.resx">
+      <DependentUpon>Crediario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CarneVendaTermica\CarneVenda.resx">
+      <DependentUpon>CarneVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CarneVendaTermica\Crediario_Vencimentos.resx">
+      <DependentUpon>Crediario_Vencimentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CarneVendaTermica\CarneVenda_Vencimentos.resx">
+      <DependentUpon>CarneVenda_Vencimentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ComandasEmAberto\ComandasEmAbertoUsuario.resx">
+      <DependentUpon>ComandasEmAbertoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FechamentoCaixa\FechamentoCaixaDiarioTermica.resx">
+      <DependentUpon>FechamentoCaixaDiarioTermica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FechamentoCaixa\FechamentoCaixaDiario_AberturaFechamentoTermica.resx">
+      <DependentUpon>FechamentoCaixaDiario_AberturaFechamentoTermica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FechamentoCaixa\FechamentoCaixaDiario_RecebimentosTermica.resx">
+      <DependentUpon>FechamentoCaixaDiario_RecebimentosTermica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FechamentoCaixa\FechamentoCaixaDiario_SangriasTermica.resx">
+      <DependentUpon>FechamentoCaixaDiario_SangriasTermica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FechamentoCaixa\FechamentoCaixaDiario_TotalizadorPagamentosTermica.resx">
+      <DependentUpon>FechamentoCaixaDiario_TotalizadorPagamentosTermica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FechamentoCaixa\FechamentoCaixaDiario_PagamentosTermica.resx">
+      <DependentUpon>FechamentoCaixaDiario_PagamentosTermica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FluxoCaixaDiario\FluxoCaixaDiario.resx">
+      <DependentUpon>FluxoCaixaDiario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FluxoCaixaDiario\FluxoCaixaDiario_Pagamentos.resx">
+      <DependentUpon>FluxoCaixaDiario_Pagamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FluxoCaixaDiario\FluxoCaixaDiario_TotalizadorPagamentos.resx">
+      <DependentUpon>FluxoCaixaDiario_TotalizadorPagamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ImpressaoComandas\ImpressaoComanda.resx">
+      <DependentUpon>ImpressaoComanda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PedidoDeCompra\ReportPedidoCompra.resx">
+      <DependentUpon>ReportPedidoCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PedidoVendaComandaTermica\ReciboPedidoVendaComanda.resx">
+      <DependentUpon>ReciboPedidoVendaComanda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PedidoVendaComandaTermica\ReciboPedidoVendaComanda_Itens.resx">
+      <DependentUpon>ReciboPedidoVendaComanda_Itens.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PedidoVendaTermica\ReciboPedidoVenda.resx">
+      <DependentUpon>ReciboPedidoVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PedidoVendaTermica\ReciboPedidoVenda_Itens.resx">
+      <DependentUpon>ReciboPedidoVenda_Itens.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ProdutosPorFornecedor\ProdutosPorFornecedor.resx">
+      <DependentUpon>ProdutosPorFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReport1.resx">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
