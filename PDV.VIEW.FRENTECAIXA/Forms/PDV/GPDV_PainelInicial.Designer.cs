@@ -72,7 +72,6 @@
             this.pictureBoxPropraganda = new System.Windows.Forms.PictureBox();
             this.tbxPesquisar = new System.Windows.Forms.TextBox();
             this.lblPesquisar = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -272,7 +271,7 @@
             // ovTXT_QuantidadeItens
             // 
             this.ovTXT_QuantidadeItens.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ovTXT_QuantidadeItens.BackColor =System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(123)))), ((int)(((byte)(51)))));
+            this.ovTXT_QuantidadeItens.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(123)))), ((int)(((byte)(51)))));
             this.ovTXT_QuantidadeItens.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ovTXT_QuantidadeItens.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ovTXT_QuantidadeItens.ForeColor = System.Drawing.Color.White;
@@ -288,7 +287,7 @@
             // ovTXT_TotalVenda
             // 
             this.ovTXT_TotalVenda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ovTXT_TotalVenda.BackColor =System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(123)))), ((int)(((byte)(51)))));
+            this.ovTXT_TotalVenda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(123)))), ((int)(((byte)(51)))));
             this.ovTXT_TotalVenda.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ovTXT_TotalVenda.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold);
             this.ovTXT_TotalVenda.ForeColor = System.Drawing.Color.White;
@@ -434,7 +433,7 @@
             // caixaPanel
             // 
             this.caixaPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.caixaPanel.BackColor =System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(123)))), ((int)(((byte)(51)))));
+            this.caixaPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(123)))), ((int)(((byte)(51)))));
             this.caixaPanel.Controls.Add(this.ovTXT_QuantidadeProdutos);
             this.caixaPanel.Controls.Add(this.ovTXT_DescricaoProduto);
             this.caixaPanel.Location = new System.Drawing.Point(586, 4);
@@ -642,24 +641,12 @@
             this.lblPesquisar.Text = "Pesquisar:";
             this.lblPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(392, 680);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 458;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Visible = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // GPDV_PainelInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1212, 733);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.lblPesquisar);
             this.Controls.Add(this.tbxPesquisar);
             this.Controls.Add(this.pictureBoxPropraganda);
@@ -753,6 +740,5 @@
         private DevExpress.XtraGrid.Columns.GridColumn colQuantidade;
         private DevExpress.XtraGrid.Columns.GridColumn colValorUnitarioItem;
         private DevExpress.XtraGrid.Columns.GridColumn colValorTotalItem;
-        private System.Windows.Forms.Button button3;
     }
 }

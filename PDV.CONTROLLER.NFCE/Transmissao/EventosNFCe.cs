@@ -156,7 +156,7 @@ namespace PDV.CONTROLLER.NFCE.Transmissao
             IntegracaoFiscal Integ = FuncoesIntegracaoFiscal.GetIntegracao(_Produto.IDIntegracaoFiscalNFCe.Value);
             decimal BaseCalculo = (Item.Subtotal - Item.DescontoValor);
 
-            prod Prod = Produtos.GetProduto(_Produto.Descricao, _Produto.IDProduto, _Produto.EAN, FuncoesNcm.GetNCM(_Produto.IDNCM).Codigo.ToString(), Convert.ToInt32(FuncoesCFOP.GetCFOP(FuncoesIntegracaoFiscal.GetIntegracao(_Produto.IDIntegracaoFiscalNFCe.Value).IDCFOP).Codigo), FuncoesUnidadeMedida.GetUnidadeMedida(_Produto.IDUnidadeDeMedida).Sigla, Item.Quantidade, Item.ValorUnitarioItem, Item.DescontoValor, _Produto.CEST, _Produto.EXTipi);
+            prod Prod = Produtos.GetProduto(_Produto.Descricao, _Produto.IDProduto, _Produto.EAN, FuncoesNcm.GetNCM(_Produto.IDNCM).Codigo.ToString().PadLeft(8, '0'), Convert.ToInt32(FuncoesCFOP.GetCFOP(FuncoesIntegracaoFiscal.GetIntegracao(_Produto.IDIntegracaoFiscalNFCe.Value).IDCFOP).Codigo), FuncoesUnidadeMedida.GetUnidadeMedida(_Produto.IDUnidadeDeMedida).Sigla, Item.Quantidade, Item.ValorUnitarioItem, Item.DescontoValor, _Produto.CEST, _Produto.EXTipi);
             det Det = Detalhe.GetDetalhe(Prod, new imposto
             {
                 vTotTrib = ValorTributosNacional + ValorTributosEstadual + ValorTributosMunicipal,

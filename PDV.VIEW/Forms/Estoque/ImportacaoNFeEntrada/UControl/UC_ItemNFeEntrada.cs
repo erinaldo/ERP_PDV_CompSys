@@ -109,6 +109,7 @@ namespace PDV.VIEW.Forms.Estoque.ImportacaoNFeEntrada.UControl
                 ovCKB_IncluirItem.Enabled = false;
                 CarregaConversoes();
                 _ItemNFeEntrada.IDProduto = Convert.ToDecimal(Seletor.drProduto["IDPRODUTO"]);
+                ovTXT_Ean.Text = Seletor.drProduto["EAN"].ToString();
                 ovTXT_Produto.Text = Seletor.drProduto["descricao"].ToString();
                 //puxa unidade de saida que foi cadastrada no produto
                 /*var produto = FuncoesProduto.GetProduto(Convert.ToDecimal(Seletor.drProduto["IDPRODUTO"]));

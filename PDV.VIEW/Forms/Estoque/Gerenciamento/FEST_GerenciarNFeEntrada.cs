@@ -4,6 +4,8 @@ using MetroFramework.Forms;
 using NFe.Danfe.Base.NFe;
 using NFe.Danfe.Fast.NFe;
 using PDV.CONTROLER.Funcoes;
+using PDV.DAO.Entidades.Financeiro;
+using PDV.DAO.Enum;
 using PDV.UTIL;
 using PDV.VIEW.App_Context;
 using PDV.VIEW.Forms.Estoque.ImportacaoNFeEntrada;
@@ -162,6 +164,18 @@ namespace PDV.VIEW.Forms.Estoque.Gerenciamento
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             decimal IDNFeEntrada = decimal.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "idnfeentrada").ToString());
+            ContaPagar contaPagar = new ContaPagar();
+            if (FuncoesContaPagar.ExistePorNFeEntradaID(IDNFeEntrada))
+                contaPagar = FuncoesContaPagar.GetContaPagarPorNfeEntrada(IDNFeEntrada);
+
+            if (contaPagar.Situacao == StatusConta.Baixado ||
+                contaPagar.Situacao == StatusConta.Parcial)
+            {
+                MessageBox.Show("A nota não pode ser editada por possui um status 'BAIXADO' ou 'PARCIAL' ", "Edição Bloqueada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+
             NFe.Classes.NFe ArquivoXML = FuncoesXml.XmlStringParaClasse<NFe.Classes.NFe>(FuncoesNFeEntrada.GetXML(IDNFeEntrada));
             new metroButton5(ArquivoXML, IDNFeEntrada).ShowDialog();
         }

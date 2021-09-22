@@ -81,6 +81,8 @@
             this.metroTabControl2 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.editDecimalLimiteDeCredito = new PDV.UTIL.Components.Custom.EditDecimal();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.ovCMB_VendedorAplicativo = new MetroFramework.Controls.MetroComboBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -96,19 +98,20 @@
             this.metroButton8 = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
             this.gridViewHistorico = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.editDecimalLimiteDeCredito = new PDV.UTIL.Components.Custom.EditDecimal();
-            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.editDecimalLimiteDisponivel = new PDV.UTIL.Components.Custom.EditDecimal();
             this.groupBox1.SuspendLayout();
             this.metroTabControl2.SuspendLayout();
             this.metroTabPage5.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.editDecimalLimiteDeCredito)).BeginInit();
             this.metroTabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewContatos)).BeginInit();
             this.metroTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewHistorico)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.editDecimalLimiteDeCredito)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.editDecimalLimiteDisponivel)).BeginInit();
             this.SuspendLayout();
             // 
             // ovTXT_CodigoCliente
@@ -687,6 +690,8 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.Controls.Add(this.label21);
+            this.groupBox2.Controls.Add(this.editDecimalLimiteDisponivel);
             this.groupBox2.Controls.Add(this.label20);
             this.groupBox2.Controls.Add(this.editDecimalLimiteDeCredito);
             this.groupBox2.Controls.Add(this.simpleButton1);
@@ -722,6 +727,50 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dados Cadastrais";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(474, 178);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(91, 13);
+            this.label20.TabIndex = 118;
+            this.label20.Text = "Limite de Crédito:";
+            // 
+            // editDecimalLimiteDeCredito
+            // 
+            this.editDecimalLimiteDeCredito.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.editDecimalLimiteDeCredito.DecimalPlaces = 2;
+            this.editDecimalLimiteDeCredito.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.editDecimalLimiteDeCredito.Location = new System.Drawing.Point(571, 175);
+            this.editDecimalLimiteDeCredito.Maximum = new decimal(new int[] {
+            -1530494977,
+            232830,
+            0,
+            131072});
+            this.editDecimalLimiteDeCredito.Name = "editDecimalLimiteDeCredito";
+            this.editDecimalLimiteDeCredito.Sigla = "R$";
+            this.editDecimalLimiteDeCredito.Size = new System.Drawing.Size(163, 21);
+            this.editDecimalLimiteDeCredito.TabIndex = 117;
+            this.editDecimalLimiteDeCredito.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.editDecimalLimiteDeCredito.ThousandsSeparator = true;
+            this.editDecimalLimiteDeCredito.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
+            this.editDecimalLimiteDeCredito.vdValorDecimal = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.editDecimalLimiteDeCredito.viPrecisao = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.editDecimalLimiteDeCredito.viTamanho = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
             // 
             // simpleButton1
             // 
@@ -1003,49 +1052,50 @@
             this.gridViewHistorico.OptionsView.ShowAutoFilterRow = true;
             this.gridViewHistorico.OptionsView.ShowFooter = true;
             // 
-            // editDecimal1
+            // label21
             // 
-            this.editDecimalLimiteDeCredito.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.editDecimalLimiteDeCredito.DecimalPlaces = 2;
-            this.editDecimalLimiteDeCredito.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.editDecimalLimiteDeCredito.Location = new System.Drawing.Point(571, 182);
-            this.editDecimalLimiteDeCredito.Maximum = new decimal(new int[] {
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(474, 205);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(89, 13);
+            this.label21.TabIndex = 120;
+            this.label21.Text = "Limite Disponivel:";
+            // 
+            // editDecimalLimiteDisponivel
+            // 
+            this.editDecimalLimiteDisponivel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.editDecimalLimiteDisponivel.DecimalPlaces = 2;
+            this.editDecimalLimiteDisponivel.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.editDecimalLimiteDisponivel.Location = new System.Drawing.Point(571, 202);
+            this.editDecimalLimiteDisponivel.Maximum = new decimal(new int[] {
             -1530494977,
             232830,
             0,
             131072});
-            this.editDecimalLimiteDeCredito.Name = "editDecimal1";
-            this.editDecimalLimiteDeCredito.Sigla = "R$";
-            this.editDecimalLimiteDeCredito.Size = new System.Drawing.Size(163, 21);
-            this.editDecimalLimiteDeCredito.TabIndex = 117;
-            this.editDecimalLimiteDeCredito.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.editDecimalLimiteDeCredito.ThousandsSeparator = true;
-            this.editDecimalLimiteDeCredito.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
-            this.editDecimalLimiteDeCredito.vdValorDecimal = new decimal(new int[] {
+            this.editDecimalLimiteDisponivel.Name = "editDecimalLimiteDisponivel";
+            this.editDecimalLimiteDisponivel.ReadOnly = true;
+            this.editDecimalLimiteDisponivel.Sigla = "R$";
+            this.editDecimalLimiteDisponivel.Size = new System.Drawing.Size(163, 21);
+            this.editDecimalLimiteDisponivel.TabIndex = 119;
+            this.editDecimalLimiteDisponivel.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.editDecimalLimiteDisponivel.ThousandsSeparator = true;
+            this.editDecimalLimiteDisponivel.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
+            this.editDecimalLimiteDisponivel.vdValorDecimal = new decimal(new int[] {
             0,
             0,
             0,
             0});
-            this.editDecimalLimiteDeCredito.viPrecisao = new decimal(new int[] {
+            this.editDecimalLimiteDisponivel.viPrecisao = new decimal(new int[] {
             2,
             0,
             0,
             0});
-            this.editDecimalLimiteDeCredito.viTamanho = new decimal(new int[] {
+            this.editDecimalLimiteDisponivel.viTamanho = new decimal(new int[] {
             15,
             0,
             0,
             0});
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(474, 185);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(91, 13);
-            this.label20.TabIndex = 118;
-            this.label20.Text = "Limite de Crédito:";
             // 
             // FCA_Cliente
             // 
@@ -1071,13 +1121,14 @@
             this.metroTabPage5.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.editDecimalLimiteDeCredito)).EndInit();
             this.metroTabPage6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewContatos)).EndInit();
             this.metroTabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewHistorico)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.editDecimalLimiteDeCredito)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.editDecimalLimiteDisponivel)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1152,5 +1203,7 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private System.Windows.Forms.Label label20;
         private UTIL.Components.Custom.EditDecimal editDecimalLimiteDeCredito;
+        private System.Windows.Forms.Label label21;
+        private UTIL.Components.Custom.EditDecimal editDecimalLimiteDisponivel;
     }
 }

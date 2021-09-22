@@ -826,5 +826,10 @@ namespace PDV.VIEW.Forms.Cadastro
         {
 
         }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
