@@ -73,6 +73,7 @@
             this.ovTXT_Senha.PasswordChar = '*';
             this.ovTXT_Senha.Size = new System.Drawing.Size(212, 23);
             this.ovTXT_Senha.TabIndex = 4;
+            this.ovTXT_Senha.UseSystemPasswordChar = true;
             this.ovTXT_Senha.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ovTXT_Senha_KeyUp);
             // 
             // ovTXT_StatusLogin

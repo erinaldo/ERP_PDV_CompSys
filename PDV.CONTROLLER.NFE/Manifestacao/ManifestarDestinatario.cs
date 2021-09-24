@@ -13,9 +13,10 @@ namespace PDV.CONTROLLER.NFE.Manifestacao
     {
         public ManifestarDestinatario() { }
 
-        public RetornoRecepcaoEvento Manifestar(int NumeroSequencial, string Chave, NFeTipoEvento Tipo, string Justificativa)
+        public RetornoRecepcaoEvento Manifestar(int NumeroSequencial, string Chave, NFeTipoEvento Tipo, string Justificativa = null)
         {
-            
+            if (String.IsNullOrEmpty(Justificativa))
+                Justificativa = null;
             return new ServicosNFe(CONFIG_NFe.CfgServico).RecepcaoEventoManifestacaoDestinatario(1, NumeroSequencial, Chave, Tipo, FuncoesEmitente.GetEmitente().CNPJ, Justificativa);
         }
 

@@ -126,6 +126,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.metroButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.metroButton5 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnAlmoxarifadoEstoque = new DevExpress.XtraEditors.SimpleButton();
             this.metroTabControl2.SuspendLayout();
             this.metroTabPage5.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -685,6 +686,7 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
+            this.groupBox3.Controls.Add(this.btnAlmoxarifadoEstoque);
             this.groupBox3.Controls.Add(this.label23);
             this.groupBox3.Controls.Add(this.ovCMB_AlmoxSaida);
             this.groupBox3.Controls.Add(this.label9);
@@ -1719,6 +1721,16 @@
             this.metroButton5.Text = "Cancelar";
             this.metroButton5.Click += new System.EventHandler(this.ovBTN_Cancelar_Click);
             // 
+            // btnAlmoxarifadoEstoque
+            // 
+            this.btnAlmoxarifadoEstoque.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnAlmoxarifadoEstoque.Location = new System.Drawing.Point(157, 0);
+            this.btnAlmoxarifadoEstoque.Name = "btnAlmoxarifadoEstoque";
+            this.btnAlmoxarifadoEstoque.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btnAlmoxarifadoEstoque.Size = new System.Drawing.Size(21, 23);
+            this.btnAlmoxarifadoEstoque.TabIndex = 167;
+            this.btnAlmoxarifadoEstoque.Click += new System.EventHandler(this.btnAlmoxarifadoEstoque_Click);
+            // 
             // FCA_Produtos
             // 
             this.Appearance.Options.UseFont = true;
@@ -1878,5 +1890,6 @@
         public MetroFramework.Controls.MetroComboBox ovCMB_UnidadeMedida;
         public System.Windows.Forms.MaskedTextBox ovTXT_Identificacao_CEST;
         public System.Windows.Forms.MaskedTextBox ovTXT_NCM;
+        private DevExpress.XtraEditors.SimpleButton btnAlmoxarifadoEstoque;
     }
 }

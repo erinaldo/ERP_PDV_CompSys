@@ -18,6 +18,7 @@ using PDV.DAO.Entidades.Estoque.InventarioEstoque;
 using BaseProdutos;
 using PDV.DAO.Enum;
 using PDV.UTIL.InventarioUtil;
+using PDV.VIEW.Forms.Consultas.Suprimento;
 
 namespace PDV.VIEW.Forms.Cadastro
 {
@@ -830,6 +831,13 @@ namespace PDV.VIEW.Forms.Cadastro
         private void groupBox4_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAlmoxarifadoEstoque_Click(object sender, EventArgs e)
+        {
+            FCO_Almoxarifado fCO_Almoxarifado = new FCO_Almoxarifado();
+            fCO_Almoxarifado.ShowDialog();
+            //ShowForm(fCO_Almoxarifado, 1);
         }
     }
 }
