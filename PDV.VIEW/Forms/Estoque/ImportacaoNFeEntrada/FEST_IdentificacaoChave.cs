@@ -52,7 +52,7 @@ namespace PDV.VIEW.Forms.Estoque.ImportacaoNFeEntrada
                 if (ManifestoEncontrado == null)
                 {
                     //Aqui só para fazer a manifestação
-                    RetornoRecepcaoEvento RetornoManif = Manif.Manifestar(1, ovTXT_Chave.Text.Replace(" ", string.Empty), NFeTipoEvento.TeMdCienciaDaOperacao, string.Empty); ;
+                    RetornoRecepcaoEvento RetornoManif = Manif.Manifestar(1, ovTXT_Chave.Text.Replace(" ", string.Empty), NFeTipoEvento.TeMdCienciaDaOperacao, "" );
                     if (RetornoManif.ProcEventosNFe[0].retEvento.infEvento.cStat != 135)
                         throw new Exception(RetornoManif.ProcEventosNFe[0].retEvento.infEvento.xMotivo);
 

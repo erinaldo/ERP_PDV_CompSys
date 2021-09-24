@@ -2,11 +2,39 @@
 using PDV.DAO.DB.Controller;
 using PDV.DAO.Entidades.DownloadNFeEntrada;
 using System;
+using System.Data;
 
 namespace PDV.CONTROLER.Funcoes
 {
     public class FuncoesManifestacaoDestinatario
     {
+
+        public static DataTable GetManisfestacaoDestinatario()
+        {
+            using (SQLQuery oSQL = new SQLQuery())
+            {
+                oSQL.SQL = @"SELECT * FROM MANIFESTACAODESTINATARIO;";
+                oSQL.Open();
+                return oSQL.dtDados;
+
+            }
+        }
+
+
+
+        public static DataTable GetManifestoPorChaveDataTable(string Chave)
+        {
+            using (SQLQuery oSQL = new SQLQuery())
+            {
+                oSQL.SQL = @"SELECT * FROM MANIFESTACAODESTINATARIO WHERE CHAVENFE = @CHAVENFE ORDER BY IDMANIFESTACAODESTINATARIO DESC";
+                oSQL.ParamByName["CHAVENFE"] = Chave;
+                oSQL.Open();
+                if (oSQL.IsEmpty)
+                    return null;
+                return oSQL.dtDados;
+            }
+        }
+
         public static ManifestacaoDestinatario GetManifestoPorChave(string Chave)
         {
             using (SQLQuery oSQL = new SQLQuery())
@@ -19,6 +47,8 @@ namespace PDV.CONTROLER.Funcoes
                 return EntityUtil<ManifestacaoDestinatario>.ParseDataRow(oSQL.dtDados.Rows[0]);
             }
         }
+
+
 
         public static bool Salvar(ManifestacaoDestinatario Manifesto)
         {

@@ -798,6 +798,18 @@
     <Compile Include="Forms\Consultas\FCO_IntegracaoFiscal.Designer.cs">
       <DependentUpon>FCO_IntegracaoFiscal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Consultas\FCO_ManifestoDFe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_ManifestoDFe.Designer.cs">
+      <DependentUpon>FCO_ManifestoDFe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_MonitorNFe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Consultas\FCO_MonitorNFe.Designer.cs">
+      <DependentUpon>FCO_MonitorNFe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Consultas\FCO_Portaria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1887,6 +1899,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Consultas\FCO_IntegracaoFiscal.resx">
       <DependentUpon>FCO_IntegracaoFiscal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\FCO_ManifestoDFe.resx">
+      <DependentUpon>FCO_ManifestoDFe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Consultas\FCO_MonitorNFe.resx">
+      <DependentUpon>FCO_MonitorNFe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Consultas\FCO_Portaria.resx">
       <DependentUpon>FCO_Portaria.cs</DependentUpon>

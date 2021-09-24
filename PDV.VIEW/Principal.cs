@@ -1878,6 +1878,18 @@ namespace PDV.VIEW
             FCO_ConversaoUM fCO_ConversaoUM = new FCO_ConversaoUM();
             ShowForm(fCO_ConversaoUM, 1);
         }
+
+        private void monitorNFeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FCO_MonitorNFe fCO_MonitorNFe = new FCO_MonitorNFe();
+            ShowForm(fCO_MonitorNFe, 1);
+        }
+
+        private void manifestoDFeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FCO_ManifestoDFe fCO_ManifestoDFe = new FCO_ManifestoDFe();
+            ShowForm(fCO_ManifestoDFe, 1);
+        }
     }
 }
 

@@ -16,6 +16,7 @@ using PDV.DAO.Entidades.Estoque.Suprimentos;
 using System.Data;
 using PDV.DAO.Custom;
 using DevExpress.DataProcessing;
+using PDV.CONTROLER.FuncoesFinanceiro;
 
 namespace PDV.VIEW.Forms.Cadastro
 {
@@ -278,6 +279,13 @@ namespace PDV.VIEW.Forms.Cadastro
             ovCMB_TipoContribuinte.SelectedItem = TiposContribuinte.Where(o => o.Codigo == _Cliente.TipoContribuinte).FirstOrDefault();
 
              editDecimalLimiteDeCredito.Value = _Cliente.LimiteDeCredito;
+
+            var financeiroCliente = new FinanceiroCliente(_Cliente);
+            if (financeiroCliente.Cliente.LimiteDeCredito != 0)
+            {
+                var creditoDisponivel = financeiroCliente.CreditoDisponivel();
+                editDecimalLimiteDisponivel.Value = creditoDisponivel;
+            }
         }
 
         private void ovBTN_Cancelar_Click(object sender, EventArgs e)

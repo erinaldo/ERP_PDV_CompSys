@@ -50,7 +50,8 @@
             // pictureBox2
             // 
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Location = new System.Drawing.Point(110, 192);
+            this.pictureBox2.Image = global::PDV.VIEW.Properties.Resources.barcode2_32x32;
+            this.pictureBox2.Location = new System.Drawing.Point(109, 190);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(170, 37);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

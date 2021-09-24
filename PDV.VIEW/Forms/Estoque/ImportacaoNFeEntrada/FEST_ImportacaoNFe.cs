@@ -17,6 +17,7 @@ using PDV.DAO.Entidades.Estoque.Suprimentos;
 using PDV.DAO.Entidades.Financeiro;
 using PDV.DAO.Entidades.NFe;
 using PDV.DAO.Entidades.PDV;
+using PDV.DAO.Enum;
 using PDV.UTIL;
 using PDV.VIEW.App_Context;
 using PDV.VIEW.Forms.Cadastro;
@@ -81,6 +82,10 @@ namespace PDV.VIEW.Forms.Estoque.ImportacaoNFeEntrada
         {
             try
             {
+                var empresa = FuncoesEmitente.GetEmitente();
+                if (ArquivoNFe.infNFe.dest.CNPJ != empresa.CNPJ)
+                    throw new Exception("CNPJ do destinatário diferente do CNPJ da empresa licenciada.");
+
                 Fornecedor = FuncoesFornecedor.GetFornecedorPorCNPJ(ArquivoNFe.infNFe.emit.CNPJ);
                 if (Fornecedor == null)
                 {
@@ -308,32 +313,6 @@ namespace PDV.VIEW.Forms.Estoque.ImportacaoNFeEntrada
                     Produto Prod = FuncoesProduto.GetProduto(item.IDProduto);
                     var itemNfeEntrada = FuncoesItemNFeEntrada.GetItemNfeEntradaPorProdutoID(item.IDProduto);
                     item.DescricaoProduto = Prod.Descricao;
-                    /*
-                      CENQ = d.imposto.IPI != null ? d.imposto.IPI.cEnq.ToString() : null,
-                        CEST = d.prod.CEST,
-                        CFOP = d.prod.CFOP.ToString(),
-                        DescricaoProduto = d.prod.xProd,
-                        CEAN = string.IsNullOrEmpty(d.prod.cEAN) ? null : (decimal?)Convert.ToDecimal(d.prod.cEAN),
-                        INDTOT = (int)d.prod.indTot,
-                        NCM = d.prod.NCM,
-                        QTRIB = d.prod.qTrib,
-                        QCOM = d.prod.qCom,
-                        UCOM = d.prod.uCom,
-                        VOUTRO = d.prod.vOutro ?? 0,
-                        UTRIB = d.prod.uTrib,
-                        VPROD = d.prod.vProd,
-                        VUNTRIB = d.prod.vUnTrib,
-                        VUNCOM = d.prod.vUnCom,
-                        XPROD = d.prod.xProd,
-                        VFRETE = d.prod.vFrete ?? 0,
-                        VDESC = d.prod.vDesc ?? 0,
-                        VSEG = d.prod.vSeg ?? 0,
-                        QuantidadeEntrada = d.prod.qCom,
-                        UNEntrada = d.prod.uCom,
-                        UNSaida = d.prod.uCom,
-                        QuantidadeSaida = d.prod.qCom,
-                        Valor = d.prod.vUnCom,
-                     */
                     item.CEAN = string.IsNullOrEmpty(Prod.EAN) ? null : (decimal?)Convert.ToDecimal(Prod.EAN);
                     item.Valor = item.vuncom;
                     item.QuantidadeEntrada = item.QCOM;
@@ -826,6 +805,7 @@ namespace PDV.VIEW.Forms.Estoque.ImportacaoNFeEntrada
                             if (!FuncoesProduto.SalvarProduto(Prod, DAO.Enum.TipoOperacao.INSERT))
                                 throw new Exception("Não foi possível salvar o Produto.");
 
+                            
                             /* Salvar ProdutoFornecedor */
                             if (!FuncoesProdutoFornecedor.Salvar(new ProdutoFornecedor
                             {
@@ -836,6 +816,8 @@ namespace PDV.VIEW.Forms.Estoque.ImportacaoNFeEntrada
                             }))
                                 throw new Exception("Não foi possível salvar o Produto Fornecedor.");
                         }
+                        var produto = FuncoesProduto.GetProduto(Control._ItemNFeEntrada.IDProduto);
+
                         ItemPedidoCompra itemPedidoCompra = new ItemPedidoCompra()
                         {
                             IDItemPedidoCompra = Sequence.GetNextID("ITEMPEDIDOCOMPRA", "IDITEMPEDIDOCOMPRA"),
@@ -843,8 +825,8 @@ namespace PDV.VIEW.Forms.Estoque.ImportacaoNFeEntrada
                             IDProduto = Control._ItemNFeEntrada.IDProduto,
                             CodigoItem = Control._ItemNFeEntrada.CEAN.ToString(),
                             ValorUnitario = Control._ItemNFeEntrada.Valor,
-                            DescricaoItem = Control._ItemNFeEntrada.DescricaoProduto,
-                            Descricao = Control._ItemNFeEntrada.DescricaoProduto,
+                            DescricaoItem = produto.Descricao,
+                            Descricao = produto.Descricao,
                             Quantidade = Control._ItemNFeEntrada.QuantidadeEntrada,
                             IDUsuario = Contexto.USUARIOLOGADO.IDUsuario,
                             Total = Control._ItemNFeEntrada.QuantidadeEntrada * Control._ItemNFeEntrada.Valor
@@ -889,8 +871,9 @@ namespace PDV.VIEW.Forms.Estoque.ImportacaoNFeEntrada
 
 
                     /* Gerar Financeiro */
-                    if (DUPLICATAS != null && DUPLICATAS.Rows.Count > 0)
-                        ZeusUtil.GerarFinanceiroNFeEntrada(PedidoCompra, DUPLICATAS, Fornecedor.IDFornecedor, NFeEntrada.IDNFeEntrada);
+                    //Comentado, estava gerando duas contas a pagar. Analisar posteriormente
+                    //if (DUPLICATAS != null && DUPLICATAS.Rows.Count > 0)
+                    //    ZeusUtil.GerarFinanceiroNFeEntrada(PedidoCompra, DUPLICATAS, Fornecedor.IDFornecedor, NFeEntrada.IDNFeEntrada);
 
                     //Inserie DAC - Faturado Status 
 
@@ -936,7 +919,7 @@ namespace PDV.VIEW.Forms.Estoque.ImportacaoNFeEntrada
                     PDVControlador.BeginTransaction();
                     //ValidaImportacao();
 
-                    NFeEntrada nfeEntrada;
+                    NFeEntrada nfeEntrada = new NFeEntrada();
                     PedidoCompra pedidoCompra = new PedidoCompra();
                     if (this.IDNFeEntrada > 0)
                     {
@@ -978,14 +961,6 @@ namespace PDV.VIEW.Forms.Estoque.ImportacaoNFeEntrada
                         }
                     }
                     
-                   /* PedidoCompra = new PedidoCompra()
-                    {
-                        IDPedidoCompra = idPedidoDeCompra,
-                        IDFornecedor = Fornecedor.IDFornecedor,
-                        IDTipoDeOperacao = idTipoDeOperacao,
-                        IDComprador = Contexto.USUARIOLOGADO.IDUsuario,
-                        Status = 1
-                    };*/
 
                     if (!FuncoesPedidoCompra.Salvar(pedidoCompra))
                         throw new Exception("Não foi possível salvar o Pedido Compra");
@@ -999,14 +974,8 @@ namespace PDV.VIEW.Forms.Estoque.ImportacaoNFeEntrada
                     if (!FuncoesNFeEntrada.AtualizarXml(Encoding.Default.GetBytes(FuncoesXml.ClasseParaXmlString(ArquivoNFe)), this.IDNFeEntrada))
                         throw new Exception("Não foi possível salvar o Xml da NF-E de Entrada.");
 
-                    var itensPedidosCompra = FuncoesItemPedidoCompra.GetItemPedidoCompraPorPedidoCompra(pedidoCompra.IDPedidoCompra);
-                    foreach(var item in itensPedidosCompra)
-                    {
-                        if (!FuncoesMovimentoEstoque.ExcluirMovimentoEstoquePorItemPedidoCompra(item.IDItemPedidoCompra))
-                            MessageBox.Show("Erro na exclusão de MovimentoEstoque por ItemPedidoVenda.ID: "+ item.IDItemPedidoCompra);
-                    }
-                    //apagar todos itens pedido compra por pedido de compra
-                    FuncoesItemPedidoCompra.RemoverPorPedidoCompra(pedidoCompra.IDPedidoCompra);
+                    
+                    
 
                     //var MovimentoEstoque = FuncoesMovimentoEstoque.ExcluirMovimentoEstoquePorItemPedidoCompra();
                     /* Salvar Produto e ProdutoFornecedor */
@@ -1114,6 +1083,20 @@ namespace PDV.VIEW.Forms.Estoque.ImportacaoNFeEntrada
                             }))
                                 throw new Exception("Não foi possível salvar o Produto Fornecedor.");
                         }
+
+                        
+
+                        var itensPedidosCompra = FuncoesItemPedidoCompra.GetItemPedidoCompraPorPedidoCompra(pedidoCompra.IDPedidoCompra);
+                        foreach (var item in itensPedidosCompra)
+                        {
+                            if (!FuncoesMovimentoEstoque.ExcluirMovimentoEstoquePorItemPedidoCompra(item.IDItemPedidoCompra))
+                                MessageBox.Show("Erro na exclusão de MovimentoEstoque por ItemPedidoVenda.ID: " + item.IDItemPedidoCompra);
+
+                            //if(FuncoesItemPedidoCompra)
+                        }
+                        //apagar todos itens pedido compra por pedido de compra
+                        FuncoesItemPedidoCompra.RemoverPorPedidoCompra(pedidoCompra.IDPedidoCompra);
+
                         ItemPedidoCompra itemPedidoCompra = new ItemPedidoCompra()
                         {
                             IDItemPedidoCompra = Sequence.GetNextID("ITEMPEDIDOCOMPRA", "IDITEMPEDIDOCOMPRA"),
@@ -1144,6 +1127,10 @@ namespace PDV.VIEW.Forms.Estoque.ImportacaoNFeEntrada
                         if (!FuncoesItemNFeEntrada.Salvar(Control._ItemNFeEntrada))
                             throw new Exception("Não foi possível salvar os Itens da NF-E.");
 
+
+                        
+
+                       
                         /* Movimento de Estoque */
                         if (!FuncoesMovimentoEstoque.Salvar(new DAO.Entidades.Estoque.Movimento.MovimentoEstoque
                         {
@@ -1169,6 +1156,7 @@ namespace PDV.VIEW.Forms.Estoque.ImportacaoNFeEntrada
                     if (!FuncoesPedidoCompra.Salvar(pedidoCompra))
                         throw new Exception("Não foi possível salvar o Pedido Compra");
 
+                    PedidoCompra = pedidoCompra;
 
                     /* Gerar Financeiro */
                     if (DUPLICATAS != null && DUPLICATAS.Rows.Count > 0)
@@ -1176,8 +1164,18 @@ namespace PDV.VIEW.Forms.Estoque.ImportacaoNFeEntrada
 
                     //Inserie DAC - Faturado Status 
 
+                    //remover baixa pagamento caso SITUACAO == CANCELADA || ABERTO
+                    var contaPagar = FuncoesContaPagar.GetContaPagarPorNfeEntrada(nfeEntrada.IDNFeEntrada);
+                    if (contaPagar.Situacao == StatusConta.Baixado ||
+                contaPagar.Situacao == StatusConta.Parcial)
+                    {
+                        FuncoesBaixaPagamento.RemoverPorContaPagarID(contaPagar.IDContaPagar);
+                    }
                     //verficar se existe contas a pagar
                     //caso sim -> excluir contas a pagar por idnfeentrada
+                    if (FuncoesContaPagar.ExistePorNFeEntradaID(nfeEntrada.IDNFeEntrada))
+                        FuncoesContaPagar.RemoverPorNfeEntradaID(nfeEntrada.IDNFeEntrada);
+                   
 
                     //Inserir o Financeiro
                     GerarContasAPagar();
@@ -1275,6 +1273,8 @@ namespace PDV.VIEW.Forms.Estoque.ImportacaoNFeEntrada
                                 IDCentroCusto = tipoDeOperacao.IdCentroCusto,
                                 IDHistoricoFinanceiro = tipoDeOperacao.IDHistoricoFinanceiro,
                                 IDFornecedor = PedidoCompra.IDFornecedor,
+                                IDNFeEntrada = NFeEntrada.IDNFeEntrada,
+                                
 
                                 Ord = numParcela.ToString(),
                                 Parcela = formaDePagamento.Qtd_Parcelas,

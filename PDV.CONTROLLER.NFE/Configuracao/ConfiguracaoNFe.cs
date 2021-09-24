@@ -74,6 +74,9 @@ namespace PDV.CONTROLLER.NFE.Configuracao
 
             if (!string.IsNullOrEmpty(em.InscricaoMunicipal))
                 Emitente.IM = em.InscricaoMunicipal;
+
+            CfgServico.SalvarXmlServicos = true;
+            CfgServico.DiretorioSalvarXml = "F:\\XMLs Testes\\CA";//Depois configurar esse caminho
         }
 
         private ConfiguracaoServico CopiarPropriedades()

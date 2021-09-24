@@ -62,11 +62,11 @@
             this.buttonAdicionarSubCategoria = new DevExpress.XtraEditors.SimpleButton();
             this.buttonAdicionarCategoria = new DevExpress.XtraEditors.SimpleButton();
             this.buttonAdicionarUnidade = new DevExpress.XtraEditors.SimpleButton();
-            this.cmbTipoDeProduto = new MetroFramework.Controls.MetroComboBox();
-            this.labelTipoDeProduto = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.metroButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.imageProdutoPictureBox = new System.Windows.Forms.PictureBox();
+            this.cmbTipoDeProduto = new MetroFramework.Controls.MetroComboBox();
+            this.labelTipoDeProduto = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.TXT_estoque_maximo = new System.Windows.Forms.MaskedTextBox();
             this.label27 = new System.Windows.Forms.Label();
@@ -126,6 +126,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.metroButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.metroButton5 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnAlmoxarifadoEstoque = new DevExpress.XtraEditors.SimpleButton();
             this.metroTabControl2.SuspendLayout();
             this.metroTabPage5.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -434,9 +435,9 @@
             this.metroTabPage5.Controls.Add(this.buttonAdicionarSubCategoria);
             this.metroTabPage5.Controls.Add(this.buttonAdicionarCategoria);
             this.metroTabPage5.Controls.Add(this.buttonAdicionarUnidade);
+            this.metroTabPage5.Controls.Add(this.groupBox4);
             this.metroTabPage5.Controls.Add(this.cmbTipoDeProduto);
             this.metroTabPage5.Controls.Add(this.labelTipoDeProduto);
-            this.metroTabPage5.Controls.Add(this.groupBox4);
             this.metroTabPage5.Controls.Add(this.label28);
             this.metroTabPage5.Controls.Add(this.TXT_estoque_maximo);
             this.metroTabPage5.Controls.Add(this.label27);
@@ -565,6 +566,44 @@
             this.buttonAdicionarUnidade.TabIndex = 155;
             this.buttonAdicionarUnidade.Click += new System.EventHandler(this.button2_Click);
             // 
+            // groupBox4
+            // 
+            this.groupBox4.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox4.Controls.Add(this.metroButton1);
+            this.groupBox4.Controls.Add(this.imageProdutoPictureBox);
+            this.groupBox4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.groupBox4.Location = new System.Drawing.Point(442, 359);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(466, 174);
+            this.groupBox4.TabIndex = 116;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Imagem do  Produto";
+            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroButton1.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.metroButton1.Appearance.Options.UseForeColor = true;
+            this.metroButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("metroButton1.ImageOptions.Image")));
+            this.metroButton1.Location = new System.Drawing.Point(175, 151);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.metroButton1.Size = new System.Drawing.Size(152, 17);
+            this.metroButton1.TabIndex = 114;
+            this.metroButton1.Text = "Localizar";
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            // 
+            // imageProdutoPictureBox
+            // 
+            this.imageProdutoPictureBox.Location = new System.Drawing.Point(175, 21);
+            this.imageProdutoPictureBox.Name = "imageProdutoPictureBox";
+            this.imageProdutoPictureBox.Size = new System.Drawing.Size(149, 124);
+            this.imageProdutoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imageProdutoPictureBox.TabIndex = 97;
+            this.imageProdutoPictureBox.TabStop = false;
+            this.imageProdutoPictureBox.Click += new System.EventHandler(this.imageProdutoPictureBox_Click);
+            // 
             // cmbTipoDeProduto
             // 
             this.cmbTipoDeProduto.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -591,43 +630,6 @@
             this.labelTipoDeProduto.Size = new System.Drawing.Size(93, 13);
             this.labelTipoDeProduto.TabIndex = 118;
             this.labelTipoDeProduto.Text = "*Tipo de Produto:";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox4.Controls.Add(this.metroButton1);
-            this.groupBox4.Controls.Add(this.imageProdutoPictureBox);
-            this.groupBox4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.groupBox4.Location = new System.Drawing.Point(23, 361);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(850, 174);
-            this.groupBox4.TabIndex = 116;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Imagem do  Produto";
-            // 
-            // metroButton1
-            // 
-            this.metroButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroButton1.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.metroButton1.Appearance.Options.UseForeColor = true;
-            this.metroButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("metroButton1.ImageOptions.Image")));
-            this.metroButton1.Location = new System.Drawing.Point(347, 150);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.metroButton1.Size = new System.Drawing.Size(152, 17);
-            this.metroButton1.TabIndex = 114;
-            this.metroButton1.Text = "Localizar";
-            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
-            // 
-            // imageProdutoPictureBox
-            // 
-            this.imageProdutoPictureBox.Location = new System.Drawing.Point(347, 20);
-            this.imageProdutoPictureBox.Name = "imageProdutoPictureBox";
-            this.imageProdutoPictureBox.Size = new System.Drawing.Size(149, 124);
-            this.imageProdutoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imageProdutoPictureBox.TabIndex = 97;
-            this.imageProdutoPictureBox.TabStop = false;
-            this.imageProdutoPictureBox.Click += new System.EventHandler(this.imageProdutoPictureBox_Click);
             // 
             // label28
             // 
@@ -684,6 +686,7 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
+            this.groupBox3.Controls.Add(this.btnAlmoxarifadoEstoque);
             this.groupBox3.Controls.Add(this.label23);
             this.groupBox3.Controls.Add(this.ovCMB_AlmoxSaida);
             this.groupBox3.Controls.Add(this.label9);
@@ -695,7 +698,6 @@
             this.groupBox3.TabIndex = 95;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Almoxarifados/Estoques";
-            this.groupBox3.Visible = false;
             // 
             // label23
             // 
@@ -1719,6 +1721,16 @@
             this.metroButton5.Text = "Cancelar";
             this.metroButton5.Click += new System.EventHandler(this.ovBTN_Cancelar_Click);
             // 
+            // btnAlmoxarifadoEstoque
+            // 
+            this.btnAlmoxarifadoEstoque.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnAlmoxarifadoEstoque.Location = new System.Drawing.Point(157, 0);
+            this.btnAlmoxarifadoEstoque.Name = "btnAlmoxarifadoEstoque";
+            this.btnAlmoxarifadoEstoque.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btnAlmoxarifadoEstoque.Size = new System.Drawing.Size(21, 23);
+            this.btnAlmoxarifadoEstoque.TabIndex = 167;
+            this.btnAlmoxarifadoEstoque.Click += new System.EventHandler(this.btnAlmoxarifadoEstoque_Click);
+            // 
             // FCA_Produtos
             // 
             this.Appearance.Options.UseFont = true;
@@ -1878,5 +1890,6 @@
         public MetroFramework.Controls.MetroComboBox ovCMB_UnidadeMedida;
         public System.Windows.Forms.MaskedTextBox ovTXT_Identificacao_CEST;
         public System.Windows.Forms.MaskedTextBox ovTXT_NCM;
+        private DevExpress.XtraEditors.SimpleButton btnAlmoxarifadoEstoque;
     }
 }

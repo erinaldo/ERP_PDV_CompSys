@@ -96,5 +96,40 @@ namespace PDV.CONTROLER.Funcoes
                 return oSQL.dtDados;
             }
         }
+
+        public static bool ExistePorContaPagarID(decimal IDContaPagar)
+        {
+            using (SQLQuery oSQL = new SQLQuery())
+            {
+                oSQL.SQL = "select * from BAIXAPAGAMENTO where IDCONTAPAGAR = @IDCONTAPAGAR;";
+                oSQL.ParamByName["IDCONTAPAGAR"] = IDContaPagar;
+                oSQL.Open();
+                return !oSQL.IsEmpty;
+            }
+        }
+
+        public static BaixaPagamento GetBaixaPagamentoPorContaPagar(decimal IDContaPagar)
+        {
+            using (SQLQuery oSQL = new SQLQuery())
+            {
+                oSQL.SQL = "select * from BAIXAPAGAMENTO where IDCONTAPAGAR = @IDCONTAPAGAR";
+                oSQL.ParamByName["IDCONTAPAGAR"] = IDContaPagar;
+                oSQL.Open();
+                if (oSQL.IsEmpty)
+                    return null;
+                return EntityUtil<BaixaPagamento>.ParseDataRow(oSQL.dtDados.Rows[0]);
+            }
+        }
+
+        public static bool RemoverPorContaPagarID(decimal IDContaPagar)
+        {
+            using (SQLQuery oSQL = new SQLQuery())
+            {
+
+                oSQL.SQL = "DELETE FROM BAIXAPAGAMENTO WHERE IDCONTAPAGAR = @IDCONTAPAGAR";
+                oSQL.ParamByName["IDCONTAPAGAR"] = IDContaPagar;
+                return oSQL.ExecSQL() == 1;
+            }
+        }
     }
 }

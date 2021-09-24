@@ -1,5 +1,6 @@
 ﻿using PDV.DAO.DB.Controller;
 using PDV.DAO.Entidades.DownloadNFeEntrada;
+using System.Data;
 
 namespace PDV.CONTROLER.Funcoes
 {
@@ -24,5 +25,17 @@ namespace PDV.CONTROLER.Funcoes
                 return oSQL.ExecSQL() == 1;
             }
         }
+
+        public static DataTable GetDownloadsNFe()
+        {
+            using (SQLQuery oSQL = new SQLQuery())
+            {
+                oSQL.SQL = @"SELECT * FROM DOWNLOADNFE;";
+                oSQL.Open();
+                return oSQL.dtDados;
+
+            }
+        }
+
     }
 }

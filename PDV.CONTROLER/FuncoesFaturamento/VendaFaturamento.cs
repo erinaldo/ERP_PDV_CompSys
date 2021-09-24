@@ -220,6 +220,7 @@ namespace PDV.CONTROLER.FuncoesFaturamento
                     return d.Valor;
                 return 0;
             });
+
             if (somaPagamentosAPrazo > 0)
             {
                 var idCliente = Venda.IDCliente;

@@ -213,6 +213,17 @@ namespace PDV.CONTROLER.Funcoes
             }
         }
 
+        public static ContaPagar GetContaPagarPorNfeEntrada(decimal IDNFeEntrada)
+        {
+            using (SQLQuery oSQL = new SQLQuery())
+            {
+                oSQL.SQL = "SELECT * FROM CONTAPAGAR WHERE IDNFEENTRADA = @IDNFEENTRADA";
+                oSQL.ParamByName["IDNFEENTRADA"] = IDNFeEntrada;
+                oSQL.Open();
+                return EntityUtil<ContaPagar>.ParseDataRow(oSQL.dtDados.Rows[0]);
+            }
+        }
+
         public static System.Collections.Generic.List<ContaPagar> GetContaPagarLista()
         {
             using (SQLQuery oSQL = new SQLQuery())
@@ -240,10 +251,31 @@ namespace PDV.CONTROLER.Funcoes
         {
             using (SQLQuery oSQL = new SQLQuery())
             {
-                oSQL.SQL = "SELECT 1 FROM CONTAPAGAR WHERE IDCONTAPAGAR = @IDCONTAPAGAR";
+                oSQL.SQL = "SELECT * FROM CONTAPAGAR WHERE IDCONTAPAGAR = @IDCONTAPAGAR";
                 oSQL.ParamByName["IDCONTAPAGAR"] = IDContaPagar;
                 oSQL.Open();
                 return !oSQL.IsEmpty;
+            }
+        }
+
+        public static bool ExistePorNFeEntradaID(decimal IDNfeEntrada)
+        {
+            using (SQLQuery oSQL = new SQLQuery())
+            {
+                oSQL.SQL = "select * from CONTAPAGAR where IDNFEENTRADA = @IDNFEENTRADA;";
+                oSQL.ParamByName["IDNFEENTRADA"] = IDNfeEntrada;
+                oSQL.Open();
+                return !oSQL.IsEmpty;
+            }
+        }
+
+        public static bool RemoverPorNfeEntradaID(decimal IDNfeEntrada)
+        {
+            using (SQLQuery oSQL = new SQLQuery())
+            {
+                oSQL.SQL = @"DELETE FROM CONTAPAGAR WHERE IDNFEENTRADA = @IDNFEENTRADA";
+                oSQL.ParamByName["IDNFEENTRADA"] = IDNfeEntrada;
+                return oSQL.ExecSQL() >= 1;
             }
         }
     }

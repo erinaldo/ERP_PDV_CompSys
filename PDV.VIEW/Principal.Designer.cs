@@ -136,6 +136,7 @@
             this.migradorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sincronizadorParaONovoSistemaWebToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.conversaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.monitorNFeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ovMenu_Ajuda = new MetroFramework.Controls.MetroContextMenu(this.components);
             this.ovBTN_Ajuda_VerificarAtualizacoes = new PDV.UTIL.Components.Custom.ToolStripMenuItem();
             this.ovBTN_Ajuda_Sobre = new PDV.UTIL.Components.Custom.ToolStripMenuItem();
@@ -224,6 +225,9 @@
             this.navBarItem28 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem29 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem30 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem58 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem59 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarSeparatorItem1 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
             this.navBarGroup6 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem33 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem35 = new DevExpress.XtraNavBar.NavBarItem();
@@ -269,6 +273,20 @@
             this.sistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.entityCommand1 = new System.Data.Entity.Core.EntityClient.EntityCommand();
             this.navBarItem32 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem57 = new DevExpress.XtraNavBar.NavBarItem();
+            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.manifestoDFeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ovMenu_Cadastros.SuspendLayout();
             this.ovMenu_Fiscal.SuspendLayout();
             this.ovMenu_Gerenciamento.SuspendLayout();
@@ -289,6 +307,8 @@
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
+            this.bindingNavigator1.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
@@ -1284,10 +1304,12 @@
             this.relatóriosToolStripMenuItem,
             this.migradorToolStripMenuItem,
             this.sincronizadorParaONovoSistemaWebToolStripMenuItem,
-            this.conversaoToolStripMenuItem});
+            this.conversaoToolStripMenuItem,
+            this.monitorNFeToolStripMenuItem,
+            this.manifestoDFeToolStripMenuItem});
             this.ovMenu_Sistema.Name = "metroContextMenu1";
             this.ovMenu_Sistema.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.ovMenu_Sistema.Size = new System.Drawing.Size(303, 290);
+            this.ovMenu_Sistema.Size = new System.Drawing.Size(303, 356);
             // 
             // ovBTN_Configuracoes_Android
             // 
@@ -1668,6 +1690,13 @@
             this.conversaoToolStripMenuItem.Text = "Conversao";
             this.conversaoToolStripMenuItem.Click += new System.EventHandler(this.conversaoToolStripMenuItem_Click);
             // 
+            // monitorNFeToolStripMenuItem
+            // 
+            this.monitorNFeToolStripMenuItem.Name = "monitorNFeToolStripMenuItem";
+            this.monitorNFeToolStripMenuItem.Size = new System.Drawing.Size(302, 22);
+            this.monitorNFeToolStripMenuItem.Text = "Monitor NFe";
+            this.monitorNFeToolStripMenuItem.Click += new System.EventHandler(this.monitorNFeToolStripMenuItem_Click);
+            // 
             // ovMenu_Ajuda
             // 
             this.ovMenu_Ajuda.BackColor = System.Drawing.Color.White;
@@ -1967,7 +1996,10 @@
             this.navBarItem54,
             this.navBarItem55,
             this.navBarItem56,
-            this.navBarItemConversao});
+            this.navBarItemConversao,
+            this.navBarItem58,
+            this.navBarItem59,
+            this.navBarSeparatorItem1});
             this.navBarControl1.Location = new System.Drawing.Point(0, 0);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 209;
@@ -2501,6 +2533,8 @@
             this.navBarGroup4.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.navBarGroup4.Appearance.Options.UseFont = true;
             this.navBarGroup4.Caption = "Fiscal";
+            this.navBarGroup4.Expanded = true;
+            this.navBarGroup4.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsText;
             this.navBarGroup4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarGroup4.ImageOptions.SvgImage")));
             this.navBarGroup4.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem17),
@@ -2511,7 +2545,10 @@
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem27),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem28),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem29),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem30)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem30),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem58),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem59),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarSeparatorItem1)});
             this.navBarGroup4.Name = "navBarGroup4";
             this.navBarGroup4.Tag = "2";
             // 
@@ -2596,6 +2633,25 @@
             this.navBarItem30.Name = "navBarItem30";
             this.navBarItem30.Tag = "74";
             this.navBarItem30.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem30_LinkClicked);
+            // 
+            // navBarItem58
+            // 
+            this.navBarItem58.Caption = "Monitor de NFe";
+            this.navBarItem58.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("navBarItem58.ImageOptions.LargeImage")));
+            this.navBarItem58.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem58.ImageOptions.SmallImage")));
+            this.navBarItem58.Name = "navBarItem58";
+            // 
+            // navBarItem59
+            // 
+            this.navBarItem59.Caption = "Manifesto DFe";
+            this.navBarItem59.Name = "navBarItem59";
+            // 
+            // navBarSeparatorItem1
+            // 
+            this.navBarSeparatorItem1.CanDrag = false;
+            this.navBarSeparatorItem1.Enabled = false;
+            this.navBarSeparatorItem1.Hint = null;
+            this.navBarSeparatorItem1.Name = "navBarSeparatorItem1";
             // 
             // navBarGroup6
             // 
@@ -3104,6 +3160,134 @@
             this.navBarItem32.Name = "navBarItem32";
             this.navBarItem32.Tag = "151";
             // 
+            // navBarItem57
+            // 
+            this.navBarItem57.Caption = "Empresa";
+            this.navBarItem57.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("navBarItem57.ImageOptions.LargeImage")));
+            this.navBarItem57.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem57.ImageOptions.SmallImage")));
+            this.navBarItem57.Name = "navBarItem57";
+            this.navBarItem57.Tag = "14";
+            // 
+            // bindingNavigator1
+            // 
+            this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
+            this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2,
+            this.bindingNavigatorAddNewItem,
+            this.bindingNavigatorDeleteItem});
+            this.bindingNavigator1.Location = new System.Drawing.Point(209, 24);
+            this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.bindingNavigator1.Name = "bindingNavigator1";
+            this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
+            this.bindingNavigator1.Size = new System.Drawing.Size(1067, 25);
+            this.bindingNavigator1.TabIndex = 27;
+            this.bindingNavigator1.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Excluir";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Mover primeiro";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Posição";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Posição atual";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Text = "Mover próximo";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Text = "Mover último";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // manifestoDFeToolStripMenuItem
+            // 
+            this.manifestoDFeToolStripMenuItem.Name = "manifestoDFeToolStripMenuItem";
+            this.manifestoDFeToolStripMenuItem.Size = new System.Drawing.Size(302, 22);
+            this.manifestoDFeToolStripMenuItem.Text = "Manifesto DFe";
+            this.manifestoDFeToolStripMenuItem.Click += new System.EventHandler(this.manifestoDFeToolStripMenuItem_Click);
+            // 
             // Principal
             // 
             this.ActiveGlowColor = System.Drawing.Color.White;
@@ -3115,6 +3299,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1276, 642);
+            this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.navBarControl1);
             this.Controls.Add(this.panel1);
@@ -3156,6 +3341,9 @@
             this.panel1.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
+            this.bindingNavigator1.ResumeLayout(false);
+            this.bindingNavigator1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3401,5 +3589,23 @@
         private System.Data.Entity.Core.EntityClient.EntityCommand entityCommand1;
         private DevExpress.XtraNavBar.NavBarItem navBarItem32;
         private System.Windows.Forms.ToolStripMenuItem conversaoToolStripMenuItem;
+        private System.Windows.Forms.BindingNavigator bindingNavigator1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem58;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem59;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem57;
+        private System.Windows.Forms.ToolStripMenuItem monitorNFeToolStripMenuItem;
+        private DevExpress.XtraNavBar.NavBarSeparatorItem navBarSeparatorItem1;
+        private System.Windows.Forms.ToolStripMenuItem manifestoDFeToolStripMenuItem;
     }
 }

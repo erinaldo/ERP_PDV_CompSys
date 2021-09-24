@@ -999,6 +999,7 @@ namespace PDV.VIEW.FRENTECAIXA.Forms
 
                 GetProduto();
 
+                
                 if (ProdutoPDV != null)
                 {
                     if (TipoFiscal != 1)
